@@ -12,7 +12,7 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Library / Packages
+## Library / Packageshh
 
 *Package* R yang akan digunakan pada perkuliahan Analisis Deret Waktu sesi UTS adalah: `forecast`, `graphics`, `TTR`, `TSA` . Jika *package* tersebut belum ada, silakan install terlebih dahulu.
 
