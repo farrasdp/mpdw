@@ -228,7 +228,7 @@ dwtest(modelHL)
 Hasil uji Durbin-Watson juga menunjukkan bahwa nilai DW sebesar $1.5063$ yang masih kurang dari nilai DU sehingga masih terdapat autokorelasi.
 
 Terakhir, akan dibandingkan nilai SSE dari ketiga metode (metode awal,
-metode Cochrane-Orcutt, dan Hildreth-Lu).
+metode Cochrane-Orcutt, dan Hildreth-Lu)
 
 ```{r}
 #Perbandingan
