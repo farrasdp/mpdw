@@ -45,7 +45,7 @@ BIC(model.koyck)
 Dari hasil tersebut, didapat bahwa peubah $x_{t}$ dan $y_{t-1}$ memiliki nilai $P-Value<0.05$. Hal ini menunjukkan bahwa peubah $x_{t}$ dan $y_{t-1}$ berpengaruh signifikan terhadap $y$. Adapun model keseluruhannya adalah sebagai berikut
 
 $$
-\hat{Y_t}=18.9840+53.074X_t-215.287Y_{t-1}
+\hat{Y_t}=18.9840-215.2870X_t+0.6423Y_{t-1}
 $$
 
 ### Peramalan dan Akurasi
@@ -71,7 +71,7 @@ AIC(model.dlm)
 BIC(model.dlm)
 ```
 
-Dari hasil diatas, didapat bahwa $P-value$ dari intercept dan X2 <0.05. Hal ini menunjukkan bahwa intercept dan X2 berpengaruh signifikan terhadap $y$. Adapun model keseluruhan yang terbentuk adalah sebagai berikut
+Dari hasil diatas, didapat bahwa $P-value$ dari intercept dan Xt-2 <0.05. Hal ini menunjukkan bahwa intercept dan X2 berpengaruh signifikan terhadap $y$. Adapun model keseluruhan yang terbentuk adalah sebagai berikut
 
 $$
 \hat{Y_t}=46.503+217.766X_t-125.024X_{t-1}-534.162X_{t-2}
@@ -142,7 +142,7 @@ BIC(model.ardl)
 Hasil di atas menunjukkan bahwa selain peubah $x_{t-1}$, hasil uji t menunjukkan nilai-p pada peubah $\ge0.05$ Hal ini menunjukkan bahwa peubah $x_{t-1}$ berpengaruh signifikan terhadap $y_t$, sementara $x_t$ dan $y_{t-1}$ berpengaruh signifikan terhadap $y_t$. Model keseluruhannya adalah sebagai berikut:
 
 $$
-\hat{Y}=-8,3594+0,3563X_t+1,4557X_{t-1}+0,1408Y_{t-1}
+\hat{Y}=24.3261+115.6671X_t+-363.5638X_{t-1}+0.5023Y_{t-1}
 $$
 
 ### Peramalan dan Akurasi
@@ -152,7 +152,7 @@ fore.ardl <- forecast(model = model.ardl, x=test$Xt, h=4)
 fore.ardl
 ```
 
-Data di atas merupakan hasil peramalan untuk 5 periode ke depan menggunakan Model Autoregressive dengan $p=1$ dan $q=1$.
+Data di atas merupakan hasil peramalan untuk 4 periode ke depan menggunakan Model Autoregressive dengan $p=1$ dan $q=1$.
 
 ```{r}
 mape.ardl <- MAPE(fore.ardl$forecasts, test$Yt)
@@ -180,7 +180,7 @@ data.frame("q_optimum" = q_opt, "p_optimum" = p_opt,
            "AIC"=model.ardl.opt$min.Stat)
 ```
 
-Dari tabel di atas, dapat terlihat bahwa nilai AIC terendah didapat ketika $p=6$ dan $q=1$, yaitu sebesar `-20,56587`. Artinya, model autoregressive optimum didapat ketika $p=6$ dan $q=1$.
+Dari tabel di atas, dapat terlihat bahwa nilai AIC terendah didapat ketika $p=6$ dan $q=1$, yaitu sebesar `-54.3281`. Artinya, model autoregressive optimum didapat ketika $p=6$ dan $q=1$.
 
 Selanjutnya dapat dilakukan pemodelan dengan nilai $p$ dan $q$ optimum seperti inisialisasi di langkah sebelumnya.
 
