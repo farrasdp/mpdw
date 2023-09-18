@@ -7,7 +7,7 @@ library(lmtest)
 library(car)
 ```
 
-## Impor Data
+## Impor Dataa
 ```{r}
 data <- rio::import("https://raw.githubusercontent.com/farrasdp/mpdw/main/Pertemuan%203/NewDelhi.csv")
 str(data)
