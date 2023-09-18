@@ -14,7 +14,7 @@ str(data)
 data
 ```
 
-## Pembagian Data
+## Pembagian Dataset
 ```{r}
 #SPLIT DATA
 train<-data[1:16,]
